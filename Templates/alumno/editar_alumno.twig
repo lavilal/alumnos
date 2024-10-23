@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Editar Alumno</title>
+</head>
+<body>
+    <h1>Editar Alumno</h1>
+    <form action="{{ path('editar_alumno', {'id': (link unavailable)}) }}" method="post">
+        <label>Nombres:</label>
+        <input type="text" name="nombres" value="{{ alumno.nombres }}"><br><br>
+        <label>Apellidos:</label>
+        <input type="text" name="apellidos" value="{{ alumno.apellidos }}"><br><br>
+        <label>Fecha Nacimiento:</label>
+        <input type="date" name="fecha_nacimiento" value="{{ alumno.fecha_nacimiento }}"><br><br>
+        <label>Fotografía:</label>
+        <input type="file" name="fotografía" value="{{ alumno.fotografía }}"><br><br>
+        <label>Carrera:</label>
+        <select name="carrera_id">
+            {% for carrera in carreras %}
+            <option value="{{ (link unavailable) }}" {% if (link unavailable) == alumno.carrera_id %}selected{% endif %}>{{ carrera.nombre }}</option>
+            {% endfor %}
+        </select><br><br>
+        <button>Guardar</button>
+    </form>
+</body>
+</html>

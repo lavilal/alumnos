@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crear Nota</title>
+</head>
+<body>
+    <h1>Crear Nota</h1>
+    <form action="{{ path('crear_nota') }}" method="post">
+        <label>Alumno:</label>
+        <select name="alumno_id">
+            {% for alumno in alumnos %}
+            <option value="{{ (link unavailable) }}">{{ alumno.nombre }}</option>
+            {% endfor %}
+        </select><br><br>
+        <label>Curso:</label>
+        <select name="curso_id">
+            {% for curso in cursos %}
+            <option value="{{ (link unavailable) }}">{{ curso.nombre }}</option>
+            {% endfor %}
+        </select><br><br>
+        <label>Semestre:</label>
+        <select name="semestre_id">
+            {% for semestre in semestres %}
+            <option value="{{ (link unavailable) }}">{{ semestre.nombre }}</option>
+            {% endfor %}
+        </select><br><br>
+        <label>Sección:</label>
+        <select name="seccion_id">
+            {% for seccion in secciones %}
+            <option value="{{ (link unavailable) }}">{{ seccion.nombre }}</option>
+            {% endfor %}
+        </select><br><br>
+        <label>Nota:</label>
+        <input type="number" name="nota"><br><br>
+        <button>Crear</button>
+    </form>
+</body>
+</html>

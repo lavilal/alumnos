@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Cursos</title>
+</head>
+<body>
+    <h1>Lista de Cursos</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for curso in cursos %}
+            <tr>
+                <td>{{ (link unavailable) }}</td>
+                <td>{{ curso.nombre }}</td>
+                <td>
+                    <a href="{{ path('editar_curso', {'id': (link unavailable)}) }}">Editar</a>
+                    <a href="{{ path('eliminar_curso', {'id': (link unavailable)}) }}">Eliminar</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

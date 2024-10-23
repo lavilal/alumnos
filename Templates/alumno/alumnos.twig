@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+    <title>Lista de Alumnos</title>
+</head>
+<body>
+    <h1>Lista de Alumnos</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombres</th>
+                <th>Apellidos</th>
+                <th>Fecha Nacimiento</th>
+                <th>Fotografía</th>
+                <th>Carrera</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for alumno in alumnos %}
+            <tr>
+                <td>{{ (link unavailable) }}</td>
+                <td>{{ alumno.nombres }}</td>
+                <td>{{ alumno.apellidos }}</td>
+                <td>{{ alumno.fecha_nacimiento }}</td>
+                <td>{{ alumno.fotografía }}</td>
+                <td>{{ alumno.carrera_id }}</td>
+                <td>
+                    <a href="{{ path('editar_alumno', {'id': (link unavailable)}) }}">Editar</a>
+                    <a href="{{ path('eliminar_alumno', {'id': (link unavailable)}) }}">Eliminar</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

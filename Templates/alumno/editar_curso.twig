@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Editar Curso</title>
+</head>
+<body>
+    <h1>Editar Curso</h1>
+    <form action="{{ path('editar_curso', {'id': (link unavailable)}) }}" method="post">
+        <label>Nombre:</label>
+        <input type="text" name="nombre" value="{{ curso.nombre }}"><br><br>
+        <button>Guardar</button>
+    </form>
+</body>
+</html>

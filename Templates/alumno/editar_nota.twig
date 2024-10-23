@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Editar Nota</title>
+</head>
+<body>
+    <h1>Editar Nota</h1>
+    <form action="{{ path('editar_nota', {'id': (link unavailable)}) }}" method="post">
+        <label>Alumno:</label>
+        <select name="alumno_id">
+            {% for alumno in alumnos %}
+            <option value="{{ (link unavailable) }}" {% if nota.alumno_id == (link unavailable) %}selected{% endif %}>{{ alumno.nombre }}</option>
+            {% endfor %}
+        </select><br><br>
+        <label>Curso:</label>
+        <select name="curso_id">
+            {% for curso in cursos %}
+            <option value="{{ (link unavailable) }}" {% if nota.curso_id == (link unavailable) %}selected{% endif %}>{{ curso.nombre }}</option>
+            {% endfor %}
+        </select><br><br>
+        <label>Semestre:</label>
+        <select name="semestre_id">
+            {% for semestre in semestres %}
+            <option value="{{ (link unavailable) }}" {% if nota.semestre_id == (link unavailable) %}selected{% endif %}>{{ semestre.nombre }}</option>
+            {% endfor %}
+        </select><br><br>
+        <label>Sección:</label>
+        <select name="seccion_id">
+            {% for seccion in secciones %}
+            <option value="{{ (link unavailable) }}" {% if nota.seccion_id == (link unavailable) %}selected{% endif %}>{{ seccion.nombre }}</option>
+            {% endfor %}
+        </select><br><br>
+        <label>Nota:</label>
+        <input type="number" name="nota" value="{{ nota.nota }}"><br><br>
+        <button>Guardar</button>
+    </form>
+</body>
+</html>

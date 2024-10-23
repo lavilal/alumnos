@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Notas</title>
+</head>
+<body>
+    <h1>Lista de Notas</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Alumno</th>
+                <th>Curso</th>
+                <th>Semestre</th>
+                <th>Sección</th>
+                <th>Nota</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for nota in notas %}
+            <tr>
+                <td>{{ (link unavailable) }}</td>
+                <td>{{ nota.alumno.nombre }}</td>
+                <td>{{ nota.curso.nombre }}</td>
+                <td>{{ nota.semestre.nombre }}</td>
+                <td>{{ nota.seccion.nombre }}</td>
+                <td>{{ nota.nota }}</td>
+                <td>
+                    <a href="{{ path('editar_nota', {'id': (link unavailable)}) }}">Editar</a>
+                    <a href="{{ path('eliminar_nota', {'id': (link unavailable)}) }}">Eliminar</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
